@@ -188,5 +188,4 @@ class Downloader:
             download_details,
         )
 
-        # Get number of unique accession numbers downloaded
-        return get_number_of_unique_filings(filings_to_fetch)
+        return [filing.accession_number for filing in filings_to_fetch]
